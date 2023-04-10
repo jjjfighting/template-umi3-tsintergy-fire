@@ -1,0 +1,44 @@
+@import '~antd/es/style/themes/default.less';
+.popoverClass {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 30px;
+  color: var(--neutral-color7);
+  line-height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  .activeIcon {
+    color: var(--primary-color);
+  }
+  .noActiveIcon {
+    color: var(--neutral-color4);
+  }
+}
+
+// 窗口内容
+.content {
+  // todo 固定宽度 或者 由内容决定
+  // width: 180px;
+  min-width: 134px;
+  & > div {
+    width: 100% !important;
+  }
+  .contentList {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  .btnsLine {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    & > button {
+      border-radius: 5px;
+      &:nth-of-type(1) {
+        margin-right: 10px;
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+      }
+    }
+  }
+}

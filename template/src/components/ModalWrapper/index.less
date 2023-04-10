@@ -1,0 +1,55 @@
+.-p-modal-wrapper {
+  & > .ant-modal-content {
+    border-radius: 6px;
+    & > .ant-modal-body {
+      padding-top: 0;
+      padding-bottom: 24px;
+    }
+    & > .ant-modal-close {
+      & > span {
+        & > i {
+          padding: 1px;
+          color: var(--primary-color);
+          font-weight: bold;
+          border: 2px var(--primary-color) solid;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    & > .ant-modal-header {
+      margin-bottom: 16px;
+      padding: 12px 24px !important;
+      border-bottom: 0;
+      border-bottom: 1px solid var(--modal-split-line-color) !important;
+      border-radius: 6px;
+
+      > .ant-modal-title {
+        border-left: 0 !important;
+      }
+    }
+
+    & > .ant-modal-footer {
+      padding-top: 0;
+      padding-bottom: 24px;
+      border-top: 0;
+    }
+  }
+}
+
+.-p-modal-wrapper-btn-center {
+  .ant-modal-footer {
+    padding-top: 10px;
+    padding-bottom: 24px;
+    text-align: center;
+  }
+}
+
+.-p-modal-wrapper-cancel-btn {
+  .ant-modal-footer {
+    .ant-btn:not(.ant-btn-primary) {
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+  }
+}

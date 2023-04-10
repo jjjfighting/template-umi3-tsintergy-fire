@@ -1,0 +1,45 @@
+.loginIndex {
+  // position: relative;
+  :global(.-tsiefe-role-login) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: rgb(240, 242, 245);
+    background-size: cover;
+
+    :global(.-tsiefe-role-login-slogon) {
+      h4 {
+        width: 420px;
+        // height: 83px;
+        margin-right: 200px;
+        margin-bottom: 20px;
+        color: #1f73f3;
+        font-weight: bold;
+        font-size: 22px;
+        font-family: 'PingFang SC';
+        // line-height: 50px;
+      }
+    }
+  }
+
+  :global(.-tsiefe-role-login-form-ctn) {
+    width: 420px;
+    margin-right: 200px;
+    border: 1px solid #1f73f3;
+    :global(.ant-input-prefix) {
+      span {
+        color: #1f73f3 !important;
+      }
+    }
+    :global(.ant-btn-primary) {
+      background: #1f73f3 !important;
+      border-color: #1f73f3 !important;
+    }
+  }
+}

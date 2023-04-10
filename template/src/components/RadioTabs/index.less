@@ -1,0 +1,107 @@
+.radio-tabs {
+  display: flex;
+  overflow: hidden;
+
+  .radio-list-wrapper {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &::before,
+    &::after {
+      position: absolute;
+      z-index: 1;
+      display: none;
+      width: 3px;
+      height: 100%;
+      content: '';
+    }
+
+    &::before {
+      left: 0;
+      box-shadow: inset 10px 0 8px -8px #00000014;
+    }
+
+    &::after {
+      right: 0;
+      box-shadow: inset -10px 0 8px -8px #00000014;
+    }
+
+    .radio-list-container {
+      position: relative;
+      display: flex;
+      transition: transform 0.3s;
+
+      .list-item-ellipsis {
+        width: 65px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: center;
+        text-overflow: ellipsis;
+      }
+
+      .radio-tabs-group {
+        .ant-radio-button-wrapper {
+          color: var(--neutral-color4) !important;
+          background-color: var(--neutral-color1) !important;
+          border: 0 !important;
+
+          &:first-child {
+            border-top-left-radius: var(--radiusGap);
+            border-bottom-left-radius: var(--radiusGap);
+          }
+
+          &:last-child {
+            border-top-right-radius: var(--radiusGap);
+            border-bottom-right-radius: var(--radiusGap);
+          }
+
+          &::before {
+            display: none !important;
+          }
+
+          .ant-radio-button {
+            top: 2px;
+            left: 2px;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+          }
+
+          &.ant-radio-button-wrapper-checked {
+            color: var(--label-view-selected-color) !important;
+
+            .ant-radio-button-checked {
+              background-color: var(--label-view-selected-bg) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu-pre-shadow {
+    &::before {
+      display: block;
+    }
+  }
+
+  .menu-suff-shadow {
+    &::after {
+      display: block;
+    }
+  }
+
+  .extra-operate-btn {
+    color: var(--neutral-color4) !important;
+    border: 0;
+  }
+
+  .ant-dropdown::before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

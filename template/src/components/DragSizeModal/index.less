@@ -1,0 +1,52 @@
+.resizable_div {
+  :global(.react-resizable-handle) {
+    position: absolute;
+    right: -5px;
+    bottom: 0;
+    z-index: 1;
+    width: 10px;
+    height: 100%;
+    cursor: col-resize;
+  }
+
+  :global(.ant-modal-footer) {
+    padding-right: 0;
+    padding-bottom: 10;
+    padding-left: 0;
+
+    .footer_div {
+      padding-right: 10px;
+      .resizable_div_y {
+        .ant_modal_footer_handle {
+          position: relative;
+          right: 0;
+          bottom: -5;
+          z-index: 999;
+          width: 100%;
+          height: 10px;
+          cursor: row-resize;
+        }
+      }
+    }
+  }
+}
+
+.dragModal {
+  &.no_point_event {
+    pointer-events: none;
+  }
+  .ant-modal-close {
+    cursor: pointer;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 10px;
+    color: var(--neutral-color6);
+    font-weight: bold;
+    font-size: 18px;
+    border-left: 4px solid var(--primary-color) !important;
+    cursor: move;
+  }
+}

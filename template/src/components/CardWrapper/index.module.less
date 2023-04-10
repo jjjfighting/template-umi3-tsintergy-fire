@@ -1,0 +1,222 @@
+.cardComponent {
+  background: var(--card-background-color);
+  border-radius: var(--radiusGap);
+  // 加载中
+  > .ant-spin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // 加载结束
+  > .ant-spin-nested-loading {
+    width: 100%;
+    height: 100%;
+
+    > :global(.ant-spin-container) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--card-background-color);
+    border-radius: var(--radiusGap);
+
+    // 固定标题
+    &.cardContainerFixed {
+      padding-top: 0;
+      > .cardHeadFixed {
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        padding-top: 14px;
+        background: var(--card-background-color);
+      }
+    }
+
+    // 阴影
+    &.shadow {
+      box-shadow: var(--default-shadow);
+    }
+
+    // 分割线样式
+    .divider {
+      margin: 0;
+    }
+
+    // 头部样式
+    > .cardHeadWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      color: var(--neutral-color7);
+      font-weight: 500;
+      font-size: 16px;
+      border-bottom: 1px solid var(--split-line-color);
+
+      .cardHeadTitle {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        height: 48px;
+        color: var(--neutral-color6);
+        font-weight: bold;
+        font-size: 16px;
+        // line-height: 48px;
+        // 扩展按钮样式
+
+        // 表头包含选项卡样式
+
+        .ant-menu {
+          position: relative;
+          z-index: 2;
+          height: 100%;
+          margin-left: -24px;
+          padding-left: 8px;
+          font-size: 16px;
+          .ant-menu-item {
+            display: flex;
+            align-items: center;
+          }
+          &.ant-menu-horizontal {
+            display: flex;
+            width: 100%;
+          }
+        }
+      }
+      .cardHeadExtra {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        color: var(--neutral-color6);
+        font-weight: normal;
+        font-size: 14px;
+
+        .icon {
+          cursor: pointer;
+        }
+      }
+    }
+
+    > .cardBody {
+      flex: 1;
+      height: calc(100% - 48px);
+      padding: 16px 24px;
+      color: var(--neutral-color7);
+    }
+
+    // middle标题统一处理样式
+    &.cardTitleMiddle {
+      > .cardHeadWrapper {
+        .cardHeadTitle {
+          // 目前暂时跟大标题一样大小
+          font-size: 16px;
+        }
+      }
+    }
+
+    // 小标题统一处理样式
+    &.cardTitleSmall {
+      > .cardHeadWrapper {
+        padding: 12px 24px;
+        border-bottom: 0;
+        .cardHeadTitle {
+          position: relative;
+          height: 30px;
+          padding-left: 13px;
+          color: var(--neutral-color7);
+          font-size: 14px;
+          line-height: 1;
+
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            content: '';
+          }
+        }
+
+        .ant-menu {
+          margin-left: -12px;
+        }
+      }
+      > .cardHeadWrapper + .cardBody {
+        padding-top: 0;
+      }
+    }
+
+    // small统一处理样式
+    &.cardContainerSmall {
+      > .cardHeadWrapper {
+        padding: 0 12px;
+
+        .ant-menu {
+          margin-left: -12px;
+        }
+      }
+
+      > .cardBody {
+        padding: 12px;
+      }
+    }
+
+    // 无间距统一处理样式
+    &.noPadding {
+      > .cardBody {
+        padding: 0;
+      }
+      > .cardHeadWrapper {
+        padding-right: 0;
+        padding-left: 0;
+        .ant-menu {
+          margin-left: 0;
+        }
+      }
+    }
+
+    // 去除标题前tag
+    &.noTitleTag {
+      & > .cardHeadWrapper,
+      &.cardContainerSmall > .cardHeadWrapper {
+        .cardHeadTitle {
+          padding-left: 0;
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .icon {
+      cursor: pointer;
+    }
+  }
+
+  .foldIcon {
+    font-size: 16px;
+    transform: rotate(270deg);
+  }
+
+  .foldIconFold {
+    font-size: 16px;
+    transform: rotate(90deg);
+  }
+
+  .foldChildren {
+    display: block;
+  }
+
+  .foldedChildren {
+    display: none;
+  }
+}

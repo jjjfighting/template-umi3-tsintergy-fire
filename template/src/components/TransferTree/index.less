@@ -1,0 +1,54 @@
+// 树样式
+.treeBox {
+  :global {
+    .ant-tree-treenode {
+      .ant-tree-switcher {
+        width: 20px;
+        max-width: 24px;
+        line-height: 24px;
+        .ant-tree-switcher-icon {
+          color: var(--neutral-color4);
+          font-size: 16px;
+          transition: transform 0.3s ease 0s;
+        }
+      }
+
+      .ant-tree-node-content-wrapper {
+        width: 100%;
+        background-color: transparent !important;
+      }
+      .ant-tree-switcher_close .ant-tree-switcher-icon {
+        transform: rotate(-90deg);
+      }
+
+      .ant-tree-node-selected {
+        background-color: var(--primary-color-bg) !important;
+      }
+    }
+  }
+}
+
+// 穿梭框的样式
+.transferBox {
+  :global {
+    .ant-transfer-list {
+      flex: 1 1 350px;
+      border: 1px solid var(--neutral-color1);
+      border-radius: var(--radiusGap);
+      .ant-transfer-list-header {
+        display: flex;
+        height: 48px;
+        color: var(--neutral-color7) !important;
+        background-color: var(--primary-color-bg);
+        border-bottom: 0;
+      }
+      .ant-transfer-list-body {
+        height: 400px;
+        overflow: auto;
+        .ant-transfer-list-body-customize-wrapper {
+          padding: 0 12px;
+        }
+      }
+    }
+  }
+}

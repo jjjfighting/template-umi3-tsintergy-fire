@@ -1,0 +1,32 @@
+.SpinFullHeight {
+  // margin-left: -20px;
+  // 加载中
+  > :global(.ant-spin) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // 加载结束
+  > :global(.ant-spin-nested-loading) {
+    width: 100%;
+    height: 100%;
+
+    > :global(.ant-spin-container) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .pageContent {
+    position: relative;
+    // padding: 0 10px 20px 20px;
+    padding-bottom: 20px;
+  }
+  .shadowPage {
+    position: relative;
+    overflow: hidden;
+    background: var(--card-background-color);
+    border-radius: var(--radiusGap);
+    box-shadow: var(--default-shadow);
+  }
+}

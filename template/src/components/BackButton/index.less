@@ -1,0 +1,23 @@
+.BackButton {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  margin: var(--marginGap) 0 0 35px;
+  padding-left: var(--marginGap);
+  color: var(--neutral-color5);
+  font-size: 14px;
+  line-height: 30px;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-bottom: 2px solid var(--neutral-color4);
+    border-left: 2px solid var(--neutral-color4);
+    transform: translateY(-44%) rotate(45deg);
+    content: '';
+  }
+}

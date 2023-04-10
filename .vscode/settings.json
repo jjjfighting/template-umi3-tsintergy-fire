@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    // 避免报红
+    "**/template/**": "html"
+  }
+}

@@ -1,0 +1,57 @@
+.tsie-tags-view {
+  position: relative;
+  display: inline-block;
+  font-weight: normal;
+
+  .tags-item {
+    position: relative;
+    margin: 0 -0.5px;
+    padding: 2px;
+    font-size: 14px;
+    border-radius: 0;
+    cursor: pointer;
+    .tag-item-content {
+      padding: 4px 17px;
+      border-radius: 2px;
+    }
+  }
+
+  .tags-item:first-child {
+    border-top-left-radius: var(--radiusGap);
+    border-bottom-left-radius: var(--radiusGap);
+  }
+
+  .tags-item:last-child {
+    border-top-right-radius: var(--radiusGap);
+    border-bottom-right-radius: var(--radiusGap);
+  }
+
+  .tags-item:hover {
+    color: var(--primary-color);
+  }
+
+  .tags-item--disabled {
+    color: var(--neutral-color4);
+    cursor: not-allowed;
+  }
+
+  .tags-item--disabled:hover {
+    color: var(--neutral-color4);
+  }
+
+  .tag-selected {
+    z-index: 2;
+    color: var(--label-view-selected-color) !important;
+    font-weight: bold;
+    background-color: var(--neutral-color1) !important;
+    .tag-item-content {
+      color: var(--a-line);
+      background-color: var(--card-background-color) !important;
+    }
+  }
+
+  .tag-default {
+    color: var(--neutral-color4) !important;
+    background-color: var(--neutral-color1) !important;
+  }
+}

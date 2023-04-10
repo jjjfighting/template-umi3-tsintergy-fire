@@ -1,0 +1,25 @@
+{
+  "name": "template-umi3-tsintergy-fire",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jjjfighting/template-umi3-tsintergy-fire.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "standard": {
+    "ignore": [
+      "template"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "standard": "17.0.0"
+  }
+}

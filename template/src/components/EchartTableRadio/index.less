@@ -1,0 +1,38 @@
+.EchartTableRadio {
+  :global {
+    .ant-radio-button-wrapper:first-child {
+      border-radius: var(--radiusGap) 0 0 var(--radiusGap);
+    }
+    .ant-radio-button-wrapper:last-child {
+      border-radius: 0 var(--radiusGap) var(--radiusGap) 0;
+    }
+    .ant-radio-button-wrapper {
+      height: 24px;
+      padding: 2px;
+      line-height: 19px;
+      background-color: var(--label-view-default-bg-color) !important;
+      border: 0 !important;
+      &:hover i {
+        color: var(--primary-color-hover);
+      }
+      i {
+        color: var(--neutral-color3);
+        font-size: 18px;
+      }
+      &::before {
+        display: none;
+      }
+      .echart-table-radio-content {
+        padding: 0 9px;
+      }
+    }
+    .ant-radio-button-wrapper-checked {
+      i {
+        color: var(--a-line) !important;
+      }
+      .echart-table-radio-content {
+        background-color: var(--card-background-color) !important;
+      }
+    }
+  }
+}

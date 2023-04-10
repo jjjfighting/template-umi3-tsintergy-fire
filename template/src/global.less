@@ -1,0 +1,113 @@
+@import '~@tsintergy/pps-style/theme.less';
+@import './assets/less/sdFireTheme.less';
+@import '~@tsintergy/pps-style/cssModules.less';
+@import '~@tsintergy/pps-style/ppsfont/iconfont.css';
+@import '~@tsintergy/pps-style/antdCommon.less';
+@import '~antd/es/style/themes/default.less';
+@import '~antd/dist/antd.css';
+
+html,
+body,
+#root {
+  height: 100%;
+  color: var(--neutral-color7);
+  background-color: var(--background-color);
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+.less-error-message {
+  display: none;
+}
+
+// 错误页面
+.ant-result {
+  .ant-result-subtitle,
+  .ant-result-title {
+    color: var(--neutral-color7);
+  }
+}
+
+.ant-table {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    border: none;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(199, 199, 199);
+    border-radius: 5px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border: none;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(199, 199, 199);
+  border-radius: 5px;
+}
+
+// type = number 样式隐藏 谷歌
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+// type = number 样式隐藏 火狐
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.ant-image-preview-img {
+  background-color: white;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// Symbol样式引入
+.iconfont-symbol {
+  /* 将icon大小与字体大小一致, 后续直接使用font-size控制大小 */
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  vertical-align: -0.15em; // 设置基线对齐, 纠正视觉未对齐的效果
+  fill: currentColor; // fill为svg专用属性(填充颜色): currentColor表示当前元素color属性, 没有则inherit
+}

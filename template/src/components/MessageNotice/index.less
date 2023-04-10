@@ -1,0 +1,23 @@
+.message-notice {
+  min-height: 44px;
+  padding: 10px 24px;
+  border-radius: 2px;
+  &.message-notice-warning {
+    color: var(--assist1-color);
+    background-color: var(--assist1-color-bg);
+    border: 1px solid var(--assist1-color);
+  }
+  &.message-notice-success {
+    color: var(--assist2-color);
+    background-color: var(--assist2-color-bg);
+    border: 1px solid var(--assist2-color);
+  }
+  &.message-notice-error {
+    color: var(--assist3-color);
+    background-color: var(--assist3-color-bg);
+    border: 1px solid var(--assist3-color);
+  }
+  :global(.ant-typography) {
+    color: currentColor !important;
+  }
+}
